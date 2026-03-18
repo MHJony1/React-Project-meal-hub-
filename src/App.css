@@ -1,0 +1,39 @@
+.nav-container{
+  background-color: rgba(241, 241, 207, 0.416);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.nav-left p{
+  font-size: 32px;
+  font-weight: bold;
+}
+.nav-left img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(216, 216, 176);
+  padding: 8px;
+}
+
+.nav-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-right: 10px;
+}
+.nav-right p{
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
