@@ -15,7 +15,7 @@ function App() {
    return (
     <>
     <Navbar></Navbar>
-    <Suspense fallback="Data Loading.....">
+    <Suspense fallback="Please Wait for Data Loading.....">
      <FoodSection foodDataRes={foodDataRes}></FoodSection>
     </Suspense>
     

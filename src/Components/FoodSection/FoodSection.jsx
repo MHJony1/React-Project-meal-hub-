@@ -8,6 +8,7 @@ const FoodSection = ({ foodDataRes }) => {
   // setfood price and set cart section
   const [foodsWithPrice, setFoodsWithPrice] = useState([]);
   const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // useEffect use kora;:
   useEffect(() => {
@@ -20,8 +21,13 @@ const FoodSection = ({ foodDataRes }) => {
         }));
         setFoodsWithPrice(mealsPrice);
       }
+      setLoading(false);
     });
   }, [foodDataRes]); 
+
+  if (loading) {
+    return <h2 style={{ textAlign: 'center', marginTop: '50px' }}>Please Wait for Data Loading....</h2>;
+  }
 
   const handleAddToCart = (foodData) => {
     const isExist = cart.find(item => item.idMeal === foodData.idMeal);
